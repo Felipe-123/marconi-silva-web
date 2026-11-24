@@ -1,0 +1,115 @@
+{
+ "casa-campo": {
+  "w": 960,
+  "h": 1280,
+  "widths": [
+   480,
+   800,
+   960
+  ],
+  "fallback": 960
+ },
+ "casa-pinos": {
+  "w": 960,
+  "h": 1280,
+  "widths": [
+   480,
+   800,
+   960
+  ],
+  "fallback": 960
+ },
+ "casa-blanca-galeria": {
+  "w": 853,
+  "h": 1280,
+  "widths": [
+   480,
+   800,
+   853
+  ],
+  "fallback": 853
+ },
+ "casa-piscina-piedra": {
+  "w": 853,
+  "h": 1280,
+  "widths": [
+   480,
+   800,
+   853
+  ],
+  "fallback": 853
+ },
+ "casa-cipreses": {
+  "w": 853,
+  "h": 1280,
+  "widths": [
+   480,
+   800,
+   853
+  ],
+  "fallback": 853
+ },
+ "casa-terrazas": {
+  "w": 1022,
+  "h": 1280,
+  "widths": [
+   480,
+   800,
+   1022
+  ],
+  "fallback": 1022
+ },
+ "casa-dos-plantas": {
+  "w": 960,
+  "h": 1280,
+  "widths": [
+   480,
+   800,
+   960
+  ],
+  "fallback": 960
+ },
+ "casa-piedra-tejas": {
+  "w": 1024,
+  "h": 1280,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "fallback": 1024
+ },
+ "casa-sierra": {
+  "w": 960,
+  "h": 1280,
+  "widths": [
+   480,
+   800,
+   960
+  ],
+  "fallback": 960
+ },
+ "juan-y-fran": {
+  "w": 1600,
+  "h": 900,
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "fallback": 1200
+ },
+ "casa-pileta-horizontal": {
+  "w": 2000,
+  "h": 1116,
+  "widths": [
+   480,
+   800,
+   1200,
+   1600,
+   2000
+  ],
+  "fallback": 1200
+ }
+}

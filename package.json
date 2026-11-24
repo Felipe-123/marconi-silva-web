@@ -1,15 +1,20 @@
 {
   "name": "marconi-silva-web",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "description": "Sitio web de Marconi Silva Arquitectos",
+  "type": "module",
   "scripts": {
-    "start": "serve . --listen tcp://0.0.0.0:${PORT:-3000} --no-clipboard"
+    "build": "node scripts/build.mjs",
+    "start": "serve dist --listen tcp://0.0.0.0:${PORT:-3000} --no-clipboard"
   },
   "dependencies": {
-    "serve": "14.2.4"
+    "serve": "14.2.6"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
+  },
+  "overrides": {
+    "compression": "1.8.2"
   }
 }
