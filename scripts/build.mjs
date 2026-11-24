@@ -10,7 +10,9 @@ const OUT = join(ROOT, "dist");
 const SITE = "https://www.marconisilva.com";
 const NAME = "Marconi Silva Arquitectos";
 const IG = "https://www.instagram.com/marconisilvaarquitectos/";
-const IG_DM = "https://ig.me/m/marconisilvaarquitectos";
+const WA_NUMBER = "5491149863078";
+const WA_DISPLAY = "+54 9 11 4986-3078";
+const WA = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent("Hola, quiero consultar por un proyecto de casa.")}`;
 const TODAY = new Date().toISOString().slice(0, 10);
 const images = JSON.parse(readFileSync(join(ROOT, "src/images.json"), "utf8"));
 
@@ -55,6 +57,7 @@ function markPath() {
   return d;
 }
 const MARK = `<svg class="mark" viewBox="0 0 124 50" aria-hidden="true" focusable="false"><path d="${markPath()}"/></svg>`;
+const WA_ICON = `<svg class="ig wa" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3.6 20.4l1.2-4.1A8.4 8.4 0 1 1 8 19.3z"/><path class="dot" d="M9.1 7.9c.2-.4.5-.5.8-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c-.1.1-.2.3-.1.5.6 1.1 1.5 2 2.6 2.6.2.1.4 0 .5-.1l.6-.6c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .4-.2.8-.6 1-.6.3-1.5.4-2.6 0-2.4-.9-4.2-2.8-5.1-5.2-.3-.9-.3-1.8 0-2.5z"/></svg>`;
 const IG_ICON = `<svg class="ig" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle class="dot" cx="17.3" cy="6.7" r="1.1"/></svg>`;
 
 // Imagen responsive: WebP en varios tamaños + JPEG de respaldo, con ancho y alto para no mover el layout
@@ -81,6 +84,7 @@ const ORG = {
   address: { "@type": "PostalAddress", addressLocality: "Buenos Aires", addressCountry: "AR" },
   areaServed: [{ "@type": "Country", name: "Argentina" }, { "@type": "Country", name: "Uruguay" }],
   knowsAbout: ["Arquitectura residencial", "Diseño de casas a medida", "Proyectos de arquitectura a distancia"],
+  telephone: `+${WA_NUMBER}`,
   sameAs: [IG],
 };
 const ld = (obj) => `<script type="application/ld+json">${JSON.stringify(obj)}</script>`;
@@ -319,7 +323,7 @@ page("proyectos-a-distancia.html", {
 <section class="wrap pad stack" style="gap:clamp(36px,4vw,56px)">
   <h2 class="h2">Cómo trabajamos</h2>
   <ol class="steps">
-    <li><h3>Nos escribís</h3><p>Por Instagram o WhatsApp. Te contestamos nosotros y armamos una primera reunión.</p></li>
+    <li><h3>Nos escribís</h3><p>Por WhatsApp. Te contestamos nosotros y armamos una primera reunión.</p></li>
     <li><h3>Primera reunión</h3><p>Hablamos de tu terreno, tu familia y cómo te gusta vivir. Traé fotos de lugares que te encantaron.</p></li>
     <li><h3>Diseño</h3><p>Dos a tres meses, con una reunión por Zoom cada diez días. Probamos varias opciones: es mejor probar en papel que en la obra.</p></li>
     <li><h3>Maqueta 3D</h3><p>Vos, nosotros y quien construye vemos exactamente la misma casa antes de empezar.</p></li>
@@ -358,7 +362,7 @@ page("contacto.html", {
   path: "/contacto",
   nav: "contacto",
   title: `Contacto | ${NAME}`,
-  description: "Contanos sobre tu terreno, tu familia y cómo te gusta vivir. Escribinos por Instagram y te contestamos nosotros.",
+  description: `Contanos sobre tu terreno, tu familia y cómo te gusta vivir. Escribinos por WhatsApp al ${WA_DISPLAY} y te contestamos nosotros.`,
   jsonld: [crumbs([["Inicio", "/"], ["Contacto", "/contacto"]])],
   body: `
 <section class="wrap page-head split">
@@ -366,11 +370,11 @@ page("contacto.html", {
   <p class="lead">Contanos sobre tu terreno, tu familia y cómo te gusta vivir. Te contestamos nosotros.</p>
 </section>
 <section class="wrap contact-cta">
-  <a class="btn solid" href="${IG_DM}" target="_blank" rel="noopener">${IG_ICON}<span>Escribinos por Instagram</span></a>
+  <a class="btn solid" href="${WA}" target="_blank" rel="noopener">${WA_ICON}<span>Escribinos por WhatsApp</span></a>
   <div class="info">
+    <div><span class="label">WhatsApp</span><a class="val ig-handle" href="${WA}" target="_blank" rel="noopener">${WA_DISPLAY}</a></div>
     <div><span class="label">Instagram</span><a class="val ig-handle" href="${IG}" target="_blank" rel="noopener">@marconisilvaarquitectos</a></div>
-    <div><span class="label">Estudio</span><span class="val">Buenos Aires, Argentina</span></div>
-    <div><span class="label">Proyectos</span><span class="val">En todo el país y en países limítrofes</span></div>
+    <div><span class="label">Estudio</span><span class="val">Buenos Aires, Argentina · proyectos en todo el país</span></div>
   </div>
 </section>`,
 });

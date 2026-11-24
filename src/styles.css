@@ -193,6 +193,9 @@ nav.main a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--ink)}
 /* contacto */
 .contact-cta{display:flex;flex-direction:column;gap:clamp(40px,5vw,64px);padding-bottom:clamp(64px,9vw,128px)}
 .contact-cta .btn .ig{width:20px;height:20px}
+.wa path:first-child{fill:none}
+.info div{display:flex;flex-direction:column;gap:6px;min-width:0}
+.info .val{font-size:20px;overflow-wrap:anywhere}
 .contact-cta .info{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;border-top:1px solid var(--line);padding-top:32px}
 @media (max-width:820px){.contact-cta .info{grid-template-columns:1fr}}
 
